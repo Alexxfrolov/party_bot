@@ -1,0 +1,17 @@
+---
+:verbose: true
+:pidfile: ./tmp/pids/sidekiq.pid
+:logfile: ./tmp/sidekiq
+:concurrency: 25
+:timeout: 30
+development:
+  :queues:
+    - admin
+    - front
+    - default
+production:
+  :queues:
+    - admin
+    - front
+    - default
+
